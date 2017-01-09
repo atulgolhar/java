@@ -43,7 +43,7 @@ public class ComicBooks3 {
 class Comic3 {                      // helper class
     String title;
     String issueNumber;
-    String condition;
+    Condition condition;
     float basePrice;
     float price;
     
