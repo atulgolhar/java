@@ -6,7 +6,7 @@ public class DVR extends JFrame {           // generic DVR dialong box
     JButton play = new JButton("Play");
     JButton stopEject = new JButton("Stop/Eject");
     JButton rewind = new JButton("Rewind");
-    JButton fastForward = new JButton("Fast Forward"):
+    JButton fastForward = new JButton("Fast Forward");
     JButton pause = new JButton("Pause");
     
     public DVR() {
