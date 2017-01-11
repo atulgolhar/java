@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Bunch extends JFrame {         // creats 3x3 button grid dialog box
+public class Bunch extends JFrame {         // creates 3x3 button grid dialog box
     
     public Bunch() {
         super("Bunch");
