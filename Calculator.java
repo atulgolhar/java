@@ -4,7 +4,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
-public class Calculator extends JFrame implements FocusListener {         // basic Calculator with 3 buttons
+public class Calculator extends JFrame implements FocusListener {       // basic Calculator with 3 buttons
     JTextField value1, value2, sum;
     JLabel plus, equals;
     
@@ -16,18 +16,18 @@ public class Calculator extends JFrame implements FocusListener {         // bas
         FlowLayout flow = new FlowLayout(FlowLayout.CENTER);
         setLayout(flow);
         
-        value1 = new JTextField("0", 5);
+        value1 = new JTextField("0", 5);        // create components
         plus = new JLabel("+");
         value2 = new JTextField("0", 5);
         equals = new JLabel("=");
         sum = new JTextField("0", 5);
         
-        value1.addFocusListener(this);
+        value1.addFocusListener(this);          // add listeners
         value2.addFocusListener(this);
         
-        sum.setEditable(false);
+        sum.setEditable(false);                 // setup sum field
         
-        add(value1);
+        add(value1);                            // add components
         add(plus);
         add(value2);
         add(equals);
