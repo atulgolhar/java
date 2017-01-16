@@ -1,4 +1,4 @@
-package com.java21days;     /* App creates a circle requiring four arguements: radius, x position,
+package com.java21days;     /* App creates a circle requiring four arguments: radius, x position,
                             y position, and color code. Example arguments 100 9 17 #FF000 */
 
 import java.awt.*;
