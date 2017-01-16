@@ -39,7 +39,7 @@ class CirclePanel extends JPanel {
             radius = 100;
         }
         if (inX == null) {
-            y == 110;
+            x = 110;
         }
         if (inY == null) {
             y = 110;
