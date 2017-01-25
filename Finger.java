@@ -16,14 +16,13 @@ public class Finger {
             System.out.println("Usage: java Finger user@host");
             return;
         }
-        try (Socket digit = new Socket(host, 79);
+        try (Socket digit = new Socket(host, 79);           // port 79 traditionally reserved for Finger services 
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(digit.getInputStream()));
                 ) {
-            
             digit.setSoTimeout(20000);
             PrintStream out = new PrintStream(digit.getOutputStream());
-            out.print(user + "\015\012");
+            out.print(user + "\015\012");   // \015 = carriage return and \012 = linefeed
             
             boolean eof = false;
             while (!eof) {
@@ -40,3 +39,9 @@ public class Finger {
         }
     }
 }
+
+/* 
+declaring socket and reader within the try statement parentheses ensures that 
+both of these resources will be closed even when the connection fails with
+an exception.
+*/
