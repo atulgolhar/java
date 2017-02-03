@@ -33,7 +33,7 @@ public class SiteClient {
             config.setServerURL(server);
             XmlRpcClient client = new XmlRpcClient();
             client.setConfig(config);
-            // create teh parameters for the request
+            // create the parameters for the request
             ArrayList params = new ArrayList();
             // send the request and get the response
             HashMap result = (HashMap) client.execute("dmoz.getRandomSite", params);
