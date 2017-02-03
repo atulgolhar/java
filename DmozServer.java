@@ -20,16 +20,16 @@ public class DmozServer {
         
         // create the server
         System.out.println("Starting Dmoz server ...");
-        WebServer server = new WebServer(4413);
-        XmlRpcServer xmlRpcServer = server.getXmlRpcServer();
+        WebServer server = new WebServer(4413);               // create web server at port 4413
+        XmlRpcServer xmlRpcServer = server.getXmlRpcServer(); // associate that server with XML-RPC
         PropertyHandlerMapping phm = new PropertyHandlerMapping();
         
         // register the handler
-        phm.addHandler("dmoz", DmozHandlerImpl.class);
+        phm.addHandler("dmoz", DmozHandlerImpl.class);  // add handler and give name
         xmlRpcServer.setHandlerMapping(phm);
         
         // start the server
-        server.start();
+        server.start();     // begin listening for requests
         System.out.println("Accepting requests ...");
     }
 }
