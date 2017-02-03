@@ -1,0 +1,42 @@
+package com.java21days;         // SiteClient app connects to the XML-RPC server and
+                                // calls dmoz.RandomSite() method on the server with no arguments
+import java.io.*;               // When working, this method returns a HashMap that contains
+import java.net.*;              // the site's URL, title and description in strings with the
+import java.util.*;             // keys "url", "title", and "description".
+import org.apache.xmlrpc.client.*;
+import org.apache.xmlrpc.*;
+
+public class SiteClient {
+    public static void main(String[] arguments[]) {
+        SiteClient client = new SiteClient();
+        try {
+            HashMap<String, String> resp = client.getRandomSite();
+            // report the results
+            if (resp.size() > 0) {
+                System.out.println("URL: " + resp.get("url") 
+                        + "\nTitle: " + resp.get("title") 
+                        + "\nDescription: " + resp.get("description"));                        
+            }
+        } catch (IOException ioe) {
+            System.out.println("Exception: " + ioe.getMessage());
+        } catch (XmlRpcException xre) {
+            System.out.println("Exception: " + xre.getMessage());
+        }
+    }
+    
+    public HashMap getRandomSite()
+        throws IOException, XmlRpcException {
+        
+            // create the client
+            XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
+            URL server = new URL("http://localhost:4413/");
+            config.setServerURL(server);
+            XmlRpcClient client = new XmlRpcClient();
+            client.setConfig(config);
+            // create teh parameters for the request
+            ArrayList params = new ArrayList();
+            // send the request and get the response
+            HashMap result = (HashMap) client.execute("dmoz.getRandomSite", params);
+            return result;
+    }
+}
