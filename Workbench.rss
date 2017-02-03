@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel
+        <title>Workbench</title>
+        <link>http://workbench.cadenhead.org/</link>
+        <description>Programming, publishing, and popes</description>
+        <docs>http://rssboard.org/rss-specification</docs>
+        <item>
+            <title>Programming Confidence Pool for the World Cup</title>
+            <link>http://workbench.cadenhead.org/new/739</link>
+            <pubDate>Wed, 11 Jun 2015 11:49:47 - 0400</pubDate>
+            <guid isPermaLink="false">tag:cadenhead.org, 2015:w.739</guid>
+            <enclosure length="2498623" type="audo/mpeg" url="http://mp3.cadenhead.org/3679.mp3" />
+        </item>
+        <item>
+            <title>Ghost of Computer Author Past</title>
+            <link>http://workbench.cadenhead.org/news/737</link>
+            <pubDate>Mon, 24 Mar 2014 17:00:13 - 0400</pubDate>
+            <guid isPermaLink="false">tag:cadenhead.org, 2015:w.737</guid>
+        </item>
+        <item>
+            <title>Interview with Zoe Zolbrod</title>
+            <link>http://workbench.cadenhead.org/news/736</link>
+            <pubDate>Fri, 21 Mar 2014 11:12:55 - 0400</pubDate>
+            <guid isPermaLink="false">tag:cadenhead.org, 2015:w.736</guid>
+        </item>
+    </channel>
+</rss>
