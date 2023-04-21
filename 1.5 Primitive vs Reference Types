@@ -10,3 +10,20 @@ public class Main {
         System.out.println("Byte y= " + y);
     }
 }
+
+
+
+// ERRORS here
+
+
+import java.awt.*;
+
+// 1.5 Primitive vs Reference Types
+public class Main {
+
+    // using Reference Types
+    public static void main(String[] args) {
+        Point point1 = new Point(x:1, y:1);
+        Point point2 = point1;
+    }
+}
