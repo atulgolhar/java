@@ -1,0 +1,24 @@
+// 1.3 Primitive Types
+public class Main {
+
+    public static void main(String[] args) {
+        byte age = 30;
+        long viewsCount = 3_123_456_789L;
+        System.out.println(age);
+        System.out.println(viewsCount);
+    }
+}
+
+
+
+/*
+Primitive Types
+byte
+short
+int
+long
+float
+double
+char
+boolean
+*/
