@@ -1,4 +1,4 @@
-// 1.3 Primitive Types
+// 1.03 Primitive Types
 public class Main {
 
     public static void main(String[] args) {
