@@ -1,29 +1,13 @@
 // 1.5 Primitive vs Reference Types
-public class Main {
-    
-    // Primitive Type, x is updated, but y still points to old x value
-    public static void main(String[] args) {
-        byte x = 1;
-        byte y = x;
-        x = 2;
-        System.out.println("Byte x= " + x);
-        System.out.println("Byte y= " + y);
-    }
-}
-
-
-
-// ERRORS here
-
 
 import java.awt.*;
 
-// 1.5 Primitive vs Reference Types
 public class Main {
 
-    // using Reference Types
     public static void main(String[] args) {
-        Point point1 = new Point(x:1, y:1);
+        Point point1 = new Point(1,1);
         Point point2 = point1;
+        point1.x = 2;
+        System.out.println(point2);
     }
 }
