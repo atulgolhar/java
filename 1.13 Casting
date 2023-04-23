@@ -1,0 +1,33 @@
+// 1.13 Casting
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Explicit Casting
+
+        String x = "1.1";
+        double y = Double.parseDouble(x) + 2;
+        System.out.println(y);
+    }
+}
+
+
+
+
+
+
+
+
+// 1.13 Casting
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Implicit Casting
+        // byte > short > int > long > float > double
+
+        double x = 1.1;
+        double y = x + 2;       // 2.0
+        System.out.println(y);
+    }
+}
