@@ -1,0 +1,141 @@
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World";
+        System.out.println(message);
+    }
+}
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+        message.endsWith("!!");
+        System.out.println(message);
+    }
+}
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+
+        System.out.println(message.endsWith("!!"));
+    }
+}
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+
+        System.out.println(message.startsWith("!!"));
+    }
+}
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+        System.out.println(message.length());
+    }
+}
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+        System.out.println(message.indexOf("H"));
+        System.out.println(message.indexOf("e"));
+        System.out.println(message.indexOf("sky"));
+    }
+}
+
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+        System.out.println(message.replace(target: "!", replacement: "*"));
+    }
+}
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+         System.out.println(message.replace(target: "!", replacement: "*"));
+        System.out.println(message);
+    }
+}
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+        System.out.println(message.toLowerCase());
+        System.out.println(message);
+    }
+}
+
+
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "Hello World" + "!!";
+        System.out.println(message.toUpperCase());
+        System.out.println(message);
+    }
+}
+
+
+
+// 1.6 Strings
+
+public class Main {
+
+    public static void main(String[] args) {
+        String message = "     Hello World" + "!!    ";
+        System.out.println(message.trim());
+        System.out.println(message);
+    }
+}
