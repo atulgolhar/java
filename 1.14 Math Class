@@ -1,0 +1,276 @@
+// 1.14 Math Class
+
+// The first method we go over is the round method where we can round 
+// a floating point number to a whole number.
+// This method is overloaded so its implemented twice.
+// in the 1st implementation, it takes a float and returns an int
+// in the 2nd implementation, it takes a double and returns a long
+// So lets pass 1.1 as a Float to this method, and 
+// store the result in an int
+// like this
+        	   = Math.round(1.1F);			pass 1.1 as a Float
+        int        = Math.round(1.1F);			and store the result in an integer
+        int result = Math.round(1.1F);			like this
+        System.out.println(result); 			now we print the result and we get 1
+	
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        int result = Math.round(1.1F);
+        System.out.println(result);
+    }
+}
+
+
+1
+
+
+
+// Another useful method is ceil or ceiling which returns
+// the smallest integer that is greater than or equal to this number.
+// So the ceiling of 1.1 is 2.
+// Now here we have a compilation error 
+// b/c this method returns a double but we are storing the result in an integer
+// So here we need to explicitly cast this to an integer.
+        int result =      Math.ceil(1.1F);        	Before explicit cast
+	int result = (int)Math.ceil(1.1F);		After explicit cast
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        int result = (int)Math.ceil(1.1F);
+        System.out.println(result);
+    }
+}
+
+
+2
+
+
+
+// Another useful method is the floor
+// In this case, its going to be 1
+// Lets take a look
+// Beautiful. There you go.
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        int result = (int)Math.floor(1.1F);
+        System.out.println(result);
+    }
+}
+
+
+1
+
+
+
+// Another useful method is max which returns the greater of two values
+// And once again, this method is overloaded.
+// In the 1st implementation, we have two integers.
+// In other implemetnations, we have two longs, two floats, two doubles.
+// So lets pass two integers here.
+// This will return the greater number which is 
+// There you go.
+
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        int result = (int)Math.max(1,2);
+        System.out.println(result);
+    }
+}
+
+2
+
+
+
+// Similar to this we have min.
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        int result = (int)Math.min(1,2);
+        System.out.println(result);
+    }
+}
+
+1
+
+
+// Another useful method is random
+// Once again we get a compilation error b/c this method RETURNS a double but we have DECLARED an int
+
+        int result = Math.random();
+        double result = Math.random();
+
+// So lets change this to a double
+// Notice that every time we run this program we get a different number
+// this number is a floating point number between 0 and 1
+
+
+
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        double result = Math.random();
+        System.out.println(result);
+    }
+}
+
+0.8965105751093622
+0.9380953287917823
+0.5404281841953265
+// What is we want random number between 0 and 100?
+// We simply mulitply this by 100
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        double result = Math.random() * 100;
+        System.out.println(result);
+    }
+}
+
+
+// Note, if we dont want these additional decimal places, we can 
+// round this number or cast it to an integer
+// So we can call Math.round and pass in the result of this expression
+
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        double result = Math.round(Math.random() * 100);
+        System.out.println(result);
+    }
+}
+
+75.0
+
+
+// We still a single decimal here so we can 
+// change the type to an int
+
+        double result = Math.round(Math.random() * 100);
+        int result = Math.round(Math.random() * 100);
+
+
+// but now we have a compilation error: possible lossy conversion from long to int
+// compilation error b/c the round method returns a long but we require an int
+        int result = Math.round(Math.random() * 100);
+	^^^		  ^^^^^
+	int 		  long
+// so what can we do?
+// This is one of those places where implicit casting CAN NOT happen 	<<<<<<<<<<<<<<<<<<<<<<<<<<
+// why? we have a value that represented in 8 bytes of memory  
+// but want to store that in only 4 bytes of memory
+// so we would lose data here.
+
+       int result = Math.round(Math.random() * 100);
+       4 bytes			    8 bytes
+
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        int result = Math.round(Math.random() * 100);
+        System.out.println(result);
+    }
+}
+
+
+// This is one of those places where Explicit casting CAN YES happen	<<<<<<<<<<<<<<<<<<<<<<<<<<
+       int result = Math.round(Math.random() * 100);			// original
+       int result = (int)Math.round(Math.random() * 100);		// add (int) Explicit Casting
+
+// So now added explicit casting
+// Lets runs this again
+// There you go
+
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        int result = (int)Math.round(Math.random() * 100);
+        System.out.println(result);
+    }
+}
+
+
+11
+31
+27
+
+
+// Now what if we dont use the round method here?
+
+        int result = (int)Math.round(Math.random() * 100);
+
+// So we will remove the round method and simply apply this casting
+
+        int result = (int) Math.random() * 100;
+
+// Now everytime we run this program we get 0
+// Why?
+// notice that we cast an (int) against the Math.random() BUT NOT the whole line.
+// Why? we lost the parenthesis ()
+// thus we cast the 0.920234234 and thus we lose the decimals and always get 0
+// and 0 times 100 is always 0
+
+        int result = (int) Math.random() * 100;
+        int result = (int)(Math.random() * 100);
+
+// To solve this problem, we need to wrap this entire expression in parenthesis ()
+
+        int result = (int)(Math.random() * 100);
+	or
+        int result = (int) (Math.random() * 100);
+
+// space between ()() or () () does not matter
+
+
+10
+12
+68
+70 
+11
+90
+
+
+
+
+
+
+// 1.14 Math Class
+
+public class Main {
+
+    public static void main(String[] args) {
+        int result = (int) (Math.random() * 100);
+        System.out.println(result);
+    }
+}
+
