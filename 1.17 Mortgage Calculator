@@ -1,0 +1,44 @@
+// 1.17 Mortgage Calculator
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Principal: ");                                // Input Principal
+        int principal = scanner.nextInt();
+
+        System.out.print("Annual Interest Rate: ");                     // Input Annual Interest Rate
+        float annualInterestRate = scanner.nextFloat();
+        float monthlyInterestRate = annualInterestRate / 100 / 12;      // convert annual to monthly
+
+        System.out.print("Years: ");                                    // Input Years
+        byte years = scanner.nextByte();
+        int totalNumberOfPayments = years * 12;
+
+        System.out.println(principal);
+        System.out.println(monthlyInterestRate);
+        System.out.println();
+        // Calculate Mortgage
+
+
+        // Output answer
+
+    }
+}
+
+//        Scanner scannerPrincipal = new Scanner(System.in);
+//        System.out.print("Principal: ");
+//        String principal = scannerPrincipal.nextLine().trim();
+//        System.out.println("Your input was: " + principal);
+//
+//        Scanner scannerAnnualInterestRate = new Scanner(System.in);
+//        System.out.print("Annual Interest Rate: ");
+//        String annualInterestRate = scannerAnnualInterestRate.nextLine().trim();
+//        System.out.println("Your input was: " + annualInterestRate);
+//
+//        Scanner scannerPeriodYears = new Scanner(System.in);
+//        System.out.print("Period (Years): ");
+//        String periodYears = scannerPeriodYears.nextLine().trim();
+//        System.out.println("Your input was: " + periodYears);
