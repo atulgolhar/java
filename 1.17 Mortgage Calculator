@@ -1,44 +1,34 @@
 // 1.17 Mortgage Calculator
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Principal: ");                                // Input Principal
+        System.out.print("Principal: ");
         int principal = scanner.nextInt();
 
-        System.out.print("Annual Interest Rate: ");                     // Input Annual Interest Rate
+        System.out.print("Annual Interest Rate: ");
         float annualInterestRate = scanner.nextFloat();
-        float monthlyInterestRate = annualInterestRate / 100 / 12;      // convert annual to monthly
+        float monthlyInterestRate = annualInterestRate / PERCENT / MONTHS_IN_YEAR;
 
-        System.out.print("Years: ");                                    // Input Years
+        System.out.print("Period (Years): ");
         byte years = scanner.nextByte();
-        int totalNumberOfPayments = years * 12;
+        int totalNumberOfPayments = years * MONTHS_IN_YEAR;
 
-        System.out.println(principal);
-        System.out.println(monthlyInterestRate);
-        System.out.println();
-        // Calculate Mortgage
+        // M = P
+        //      * (r * (1+r)**n )
+        //      / (     ( (1+r)**n ) -1     )
+        double mortgage = principal
+                        * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalNumberOfPayments) )
+                        / (Math.pow(1 + monthlyInterestRate, totalNumberOfPayments) -1 );
 
-
-        // Output answer
-
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.println(mortgageFormatted);
     }
 }
-
-//        Scanner scannerPrincipal = new Scanner(System.in);
-//        System.out.print("Principal: ");
-//        String principal = scannerPrincipal.nextLine().trim();
-//        System.out.println("Your input was: " + principal);
-//
-//        Scanner scannerAnnualInterestRate = new Scanner(System.in);
-//        System.out.print("Annual Interest Rate: ");
-//        String annualInterestRate = scannerAnnualInterestRate.nextLine().trim();
-//        System.out.println("Your input was: " + annualInterestRate);
-//
-//        Scanner scannerPeriodYears = new Scanner(System.in);
-//        System.out.print("Period (Years): ");
-//        String periodYears = scannerPeriodYears.nextLine().trim();
-//        System.out.println("Your input was: " + periodYears);
