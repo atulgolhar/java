@@ -1,0 +1,247 @@
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120000;
+    }
+}
+
+
+
+/*
+1 income at 120000
+2 add underscore to 120000 to make code more readible
+3 declare boolean variable hasHighIncome
+4 looks very amaturish
+5 delete the first declaration and allow second line to be the declartion but then compilation error arises
+6 compilation error b/c can not declare a variable here, you can ONLY declare a variable inside code blocks
+7 so need to add {} to create a code block
+8 but then hasHighIncome variable is scoped ONLY to that small code block and thus not accessible outside the curely braces
+9 so add this code line to declare variable outside the small code block
+10 so then declare here
+11 remove boolean keyword and 12 set hasHighIncome = true
+12 remove this {
+13 remove this }
+14 add else clause
+15 set hasHighIncome = false
+16 remove the System.out.println method as its not needed anymore
+17 so now we are here
+18 to improve, give the boolean an initial value
+   set boolean hasHighIncome to false initially then use the conditional if statement to test
+   if they do infact have a high income > 100000 then set the variable to true and thus dont need the else statement at all
+   delete the else statement
+19 now lets completely get rid of the if statement
+   do not hardcode false. Use the expression instead.
+20 Mosh prefers to wrap right side in () to make it look cleaner
+*/
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome;						4 looks very amaturish
+        if (income > 100_000)
+            hasHighIncome = true;					4 looks very amaturish
+    }
+}
+
+
+
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        if (income > 100_000)					5 delete the first declaration and allow second line to be the declartion but then compilation error arises
+            hasHighIncome = true;				5 delete the first declaration and allow second line to be the declartion but then compilation error arises
+    }
+}
+
+
+
+
+6 compilation error b/c can not declare a variable here, you can ONLY declare a variable inside code blocks
+7 so need to add {} to create a code block
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        if (income > 100_000) {					added {
+            boolean hasHighIncome = true;
+        }							added }
+    }
+}
+
+
+
+
+8 but then hasHighIncome variable is scoped ONLY to that small code block and thus not accessible outside the curely braces
+  why? b/c this variable is not available outside of the code block in which it is declared
+
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        if (income > 100_000) {
+            boolean hasHighIncome = true;
+        }
+        System.out.println(hasHighIncome); 			8 this will not print as hasHighIncome is scoped to the above small code block only
+    }
+}
+
+
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome; 					9 so add this code line to declare variable outside the small code block
+        if (income > 100_000) {
+            boolean hasHighIncome = true;
+        }
+        System.out.println(hasHighIncome);
+    }
+}
+
+
+
+
+10 so then declare here
+11 remove boolean keyword and 12 set hasHighIncome = true
+12 remove this {
+13 remove this }
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome;					10 declare here
+        if (income > 100_000) {					12 remove this {
+            hasHighIncome = true;				11 remove boolean keyword and 12 set hasHighIncome = true
+        }							13 remove this }
+        System.out.println(hasHighIncome);
+    }
+}
+
+
+
+14 add else clause
+15 set hasHighIncome = false
+16 remove the System.out.println method as its not needed anymore
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome;
+        if (income > 100_000)
+            hasHighIncome = true;
+        else							14 add else clause
+            hasHighIncome = false;				15 set hasHighIncome = false
+
+        System.out.println(hasHighIncome);			16 remove the System.out.println method
+    }
+}
+
+
+
+
+17 so now we are here, looks very amateurish
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome;
+        if (income > 100_000)
+            hasHighIncome = true;
+        else
+            hasHighIncome = false;
+    }
+}
+
+
+
+
+
+18 to improve, give the boolean an initial value
+   set boolean hasHighIncome to false initially then use the conditional if statement to test
+   if they do infact have a high income > 100000 then set the variable to true and thus dont need the else statement at all
+   delete the else statement
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome = false;
+        if (income > 100_000)
+            hasHighIncome = true;
+    }
+}
+
+
+
+19 now lets completely get rid of the if statement
+   do not hardcode false. Use the expression instead.
+
+
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome = income > 100_000;
+    }
+}
+
+
+
+20 Mosh prefers to wrap right side in () to make it look cleaner
+
+
+
+
+
+
+// most professional looking, simple, clear, easy to read
+
+// 03.05 Simplifying If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome = (income > 100_000);
+    }
+}
