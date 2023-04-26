@@ -1,4 +1,4 @@
-// 01.14 Math Class
+// 02.14 Math Class
 
 // The first method we go over is the round method where we can round 
 // a floating point number to a whole number.
@@ -37,7 +37,7 @@ public class Main {
         int result =      Math.ceil(1.1F);        	Before explicit cast
 	int result = (int)Math.ceil(1.1F);		After explicit cast
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -57,7 +57,7 @@ public class Main {
 // Lets take a look
 // Beautiful. There you go.
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -81,7 +81,7 @@ public class Main {
 // There you go.
 
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -97,7 +97,7 @@ public class Main {
 
 // Similar to this we have min.
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -123,7 +123,7 @@ public class Main {
 
 
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -139,7 +139,7 @@ public class Main {
 // What is we want random number between 0 and 100?
 // We simply mulitply this by 100
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -155,7 +155,7 @@ public class Main {
 // So we can call Math.round and pass in the result of this expression
 
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -190,7 +190,7 @@ public class Main {
        4 bytes			    8 bytes
 
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -210,7 +210,7 @@ public class Main {
 // There you go
 
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
@@ -265,7 +265,7 @@ public class Main {
 
 
 
-// 01.14 Math Class
+// 02.14 Math Class
 
 public class Main {
 
