@@ -1,0 +1,101 @@
+// 03.04 If Statements
+
+/*
+If temp is greater than 30
+    It's a hot day
+    Drink plenty of water
+Otherwise, if its between 20 and 30
+    It's a nice day
+Otherwise
+    It's cold
+*/
+
+
+
+// 03.04 If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int temp = 32;
+        if (temp > 30)
+            System.out.println("It's a hot day");
+    }
+}
+
+
+
+
+// 03.04 If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int temp = 19;
+        if (temp > 30) {
+            System.out.println("It's a hot day");
+            System.out.println("Drink plenty of water");
+        } else if (temp > 20 && temp <= 30) {
+            System.out.println("Beautiful day");
+        } else {
+            System.out.println("Cold day");
+        }
+    }
+}
+
+
+
+// 03.04 If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int temp = 29;
+        if (temp > 30) {
+            System.out.println("It's a hot day");
+            System.out.println("Drink plenty of water");
+        } else if (temp > 20 && temp <= 30)					            // remove extra {}
+            System.out.println("Beautiful day"); 				
+          else									
+            System.out.println("Cold day");			
+    }
+}
+
+
+
+
+// 03.04 If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int temp = 29;
+        if (temp > 30) {
+            System.out.println("It's a hot day");
+            System.out.println("Drink plenty of water");
+        } else if (temp > 20) 						// remove second comparison as its unnecessary
+            System.out.println("Beautiful day");
+          else
+            System.out.println("Cold day");
+    }
+}
+
+
+
+
+// 03.04 If Statements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int temp = 29;
+        if (temp > 30) {
+            System.out.println("It's a hot day");
+            System.out.println("Drink plenty of water");
+        } 
+        else if (temp > 20)						                      // move clause to line up indent, easier to read
+            System.out.println("Beautiful day");
+        else								                                // move clause to line up indent, easier to read
+            System.out.println("Cold day");
+    }
+}
