@@ -1,0 +1,23 @@
+// 03.02 Comparison Operators
+
+=	assignment operator
+== 	equality operator 		boolean
+
+
+
+
+// 03.02 Comparison Operators
+
+public class Main {
+
+    public static void main(String[] args) {
+        int x = 1;
+        int y = 1;
+        System.out.println(x == y);
+	System.out.println(x != y);
+	System.out.println(x > y);
+        System.out.println(x >= y);
+        System.out.println(x < y);
+        System.out.println(x <= y);
+    }
+}
