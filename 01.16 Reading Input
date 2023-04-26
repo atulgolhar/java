@@ -1,4 +1,4 @@
-// 1.16 Reading Input
+// 01.16 Reading Input
 
 import java.util.Scanner;
 
@@ -11,4 +11,3 @@ public class Main {
         System.out.println("You are " + name);
     }
 }
-
