@@ -1,0 +1,89 @@
+// 03.06 Ternary Operator
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+    }
+}
+
+
+
+
+// amatuerish code
+
+
+// 03.06 Ternary Operator
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        String className;
+        if (income > 100_000)
+            className = "First";
+        else
+            className = "Economy";
+    }
+}
+
+
+// better - at declaration, also give an initial value
+
+
+// 03.06 Ternary Operator
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        String className = "Economy";
+        if (income > 100_000)
+            className = "First";
+        else
+            className = "Economy";
+    }
+}
+
+
+//	    thus allows you to get rid of else clause
+
+
+// 03.06 Ternary Operator
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        String className = "Economy";
+        if (income > 100_000)
+            className = "First";
+    }
+}
+
+
+
+// ternary operator is helpful here
+
+= condition ? ifTrueThisValue : otherWiseThisOtherValue
+
+
+
+// 03.06 Ternary Operator
+
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        String className = income > 100_000 ? "First" : "Economy";
+    }
+}
+
+
+
+
+
+
+
+
+
