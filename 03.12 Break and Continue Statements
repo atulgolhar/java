@@ -1,0 +1,226 @@
+// 03.12 Break and Continue Statements
+
+
+// from last tutorial
+// this program has tiny problem: quit gets echoed back after quitting. This looks weird. Lets solve it.
+
+Input: 1
+1
+Input: 2
+2
+Input: quit
+quit
+
+
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        while (!input.equals("quit")) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
+    }
+}
+
+
+
+// 1) one way to solve is to check the input before printing it
+
+        while (!input.equals("quit")) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            if (!input.equals("quit"))					// if input does not equal quit, then we print it
+                System.out.println(input);				// here is the print it statement
+
+
+
+// then test it immediately
+
+Input: 1
+1
+Input: 2
+2
+Input: quit
+
+
+// but another way to solve this problem as well
+// we can reverse this condition, so
+// if user types quit, then immediately jump out of the loop USING THE BREAK statement
+
+// so if the user types quit then we break out of the loop
+// otherwise we continue execution and print this input on the terminal.
+// So when java sees the break, it will ignore everything after it and it will terminate the loop.
+
+        while (!input.equals("quit")) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            if (input.equals("quit"))
+                break;
+            System.out.println(input);
+
+
+// we also have the continue statement that moves control to the beginning of a loop.
+// so we ask for input, and if the user enters "pass" we use the continue statement.
+// when java see continue; it will then move CONTROL TO THE BEGINNING of the loop.
+// so all these other statements are going to be ignored and thus
+// what the user types is not going to get printed on the terminal.
+
+
+
+
+// 03.12 Break and Continue Statements
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        while (!input.equals("quit")) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+
+            if (input.equals("pass"))
+                continue; 				<<<<< when java sees this, it will move control to the beginning of the loop
+
+            if (input.equals("quit"))
+                break;
+            System.out.println(input);
+        }
+    }
+}
+
+
+
+
+Input: 1
+1
+Input: 2
+2
+Input: pass
+Input: pass
+Input: quit
+
+
+
+// so now summary
+// break statement terminates the loop
+// continue statement moves controls back to the beginning of the loop
+
+
+
+
+
+// 03.12 Break and Continue Statements
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        while (!input.equals("quit")) { 			<<<<<<<<< do NOT need this statement
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+
+            if (input.equals("pass"))
+                continue;
+
+            if (input.equals("quit"))
+                break;						<<<<<<<<< b/c this line will break out of the loop
+            System.out.println(input);
+        }
+    }
+}
+
+
+
+
+// one last thing to review here.
+<<<<<<<<< do NOT need this statement
+<<<<<<<<< b/c this line will break out of the loop
+// so we can simplify the code
+
+
+
+        while (!input.equals("quit")) {			<<<<<<<<<<<<<<<<<< change this line
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+
+            if (input.equals("pass"))
+                continue;
+
+            if (input.equals("quit"))
+                break;
+            System.out.println(input);
+
+
+        while (true) {					<<<<<<<<<<<<<<<<<< while (true);
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+
+            if (input.equals("pass"))
+                continue;
+
+            if (input.equals("quit"))
+                break;					<<<<<<<<<<<<<<<<<< must have a break statement
+            System.out.println(input);
+
+
+// So when using while loops, use a while (true) statement but
+// must a have a break statement to avoid infinite loops.
+
+
+
+
+// 03.12 Break and Continue Statements
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        while (true) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+
+            if (input.equals("pass"))
+                continue;
+
+            if (input.equals("quit"))
+                break;
+            System.out.println(input);
+        }
+    }
+}
+
+
+
+Input: 1
+1
+Input: 2
+2
+Input: 3
+3
+Input: quit
+
+
