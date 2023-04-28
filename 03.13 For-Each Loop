@@ -1,0 +1,114 @@
+// 03.13 For-Each Loop
+
+// to iterate over arrays or collections
+// String [] arraryFruits = {}
+
+// for (loop counter i; i < length; increment i)
+
+
+// 03.13 For-Each Loops
+
+public class Main {
+
+    public static void main(String[] args) {
+        String[] fruits = {"Apple", "Mango", "Orange"};
+
+        for (int i = 0; i < fruits.length; i++)
+            System.out.println(fruits[i]);
+    }
+}
+
+
+Apple
+Mango
+Orange
+
+
+
+
+
+// another way to write same code using For Each loop
+
+// no need for counter, boolean expression, or increment the counter so it much easier
+
+// 03.13 For-Each Loops
+
+public class Main {
+
+    public static void main(String[] args) {
+        String[] fruits = {"Apple", "Mango", "Orange"};
+
+        for (int i = 0; i < fruits.length; i++)
+            System.out.println(fruits[i]);
+
+        for (String fruit : fruits)
+            System.out.println(fruit);
+    }
+}
+
+
+
+
+Apple
+Mango
+Orange
+Apple
+Mango
+Orange
+
+
+
+// Detailed explanation for limitations...
+
+
+// 03.13 For-Each Loops
+
+public class Main {
+
+    public static void main(String[] args) {
+        String[] fruits = {"Apple", "Mango", "Orange"};
+
+        for (int i = fruits.length; i > 0; i--)
+            System.out.println(fruits[i]);
+
+        for (String fruit : fruits)
+            System.out.println(fruit);
+    }
+}
+
+
+// Some limitations of the For-Each loop
+// limitation #1) its always forward only.									    END
+//													    BEGINNING
+//													    ^^^^^   ^^^^^
+// 		  So we can not iterate over this array from the end to the beginning.		for (String fruit : fruits)
+//		  In contrast, in For Loop we can easily iterate from the end       		for (int i = fruits.length; i > 0; i--)
+//
+//			FORWARD ONLY       	for (int i = 0; i < fruits.length; i++)
+//
+//     			ITERATE FROM END 	for (int i = fruits.length; i > 0; i--)		so as long as i > 0 we decriment i
+//
+//						     int i = 0              i < fruits.length	 i++
+//     			ITERATE FROM END 	for (int i = fruits.length; i > 0;               i--)
+
+ 
+// limitation #2) do NOT have access to the index of each item
+//		  all we do have is the loop variable fruit which holds the value of each item in this array
+//					^^^^^^^^^^^^^^^^^^^
+//
+//				        for (String fruit : fruits)	        String[] fruits = {"Apple", "Mango", "Orange"};
+//						    ^^^^^					    ^^^^^    ^^^^^    ^^^^^^				
+//		  why?
+//		  For Each loop, you only have access to the loop variable itself which hold the item directly
+//		  and the loop variable is not the index. 
+//		  In contrast, 
+//		  In For loop, you access both the index and the actual item
+//		  how? 
+//		  so i represents the index of each item 
+//		  and 
+//		  fruits[i] returns the item at the given index
+
+// Summary
+// so if you need the index, you use the For loop
+// if you dont need the index, then much easier to use the For Each loop
+
