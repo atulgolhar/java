@@ -1,0 +1,179 @@
+// 03.11 Do While Loops
+
+// very similar to a While Loop but While can have ZERO executions if the condition fails
+// Do While will have AT LEAST one execution of the loop.
+
+
+// start with Do keyword
+// then create code block
+// at the end of the code block we type while followed by our loop condition
+
+do {
+
+} while (loop condition)
+
+
+				// starting point from prior lecture:
+
+				// 03.10 While Loops
+
+				import java.util.Scanner;
+
+				public class Main {
+
+				    public static void main(String[] args) {
+
+				        Scanner scanner = new Scanner(System.in);
+				        String input = "";
+
+				        while (!input.equals("quit")) {
+				            System.out.print("Input: ");
+				            input = scanner.next().toLowerCase();
+				            System.out.println(input);
+				        }
+				    }
+				}
+
+// very similar to a While Loop but While can have ZERO executions if the condition fails
+// Do While will have AT LEAST one execution of the loop.
+
+
+// start with Do keyword
+// then create code block
+// at the end of the code block we type while followed by our loop condition
+
+do {
+						// <<<<------ copy body of above code here
+} while (loop condition)
+
+
+
+
+do {
+	System.out.print("Input: ");
+	input = scanner.next().toLowerCase();
+	System.out.println(input);
+} while (loop condition)
+
+
+
+
+
+// 03.10 While Loops
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        while (!input.equals("quit")) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
+
+        do {
+            
+        } while ();
+
+    }
+}
+
+
+
+
+
+
+        do {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        } while ();
+
+
+
+
+
+
+
+
+
+
+// 03.10 While Loops
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        while (!input.equals("quit")) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
+
+        do {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        } while ();
+
+    }
+}
+
+
+
+
+
+
+
+// then add while condition as well
+
+
+
+// 03.10 While Loops
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        while (!input.equals("quit")) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
+
+        do {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        } while (!input.equals("quit"));
+
+    }
+}
+
+
+// so now compare the execution of both
+// do while loops check the condition last, thus execution happens at least once
+// even if the condition is false.
+// Do While are rarely used. Prefer to use While Loops but need to be aware.
+
+
+
+
+
+
+
