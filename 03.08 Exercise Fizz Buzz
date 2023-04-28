@@ -1,0 +1,189 @@
+// Best solution is at the bottom --> Flat Structure
+
+// 03.08 Exercise Fizz Buzz
+
+Divisible by 5 get Fizz
+Divisible by 3 get Buzz
+Divisible by both 5 and 3 get FizzBuzz
+Divisible by neither then the input number is repeated on terminal
+
+
+// to read a number, use Scanner object					Scanner scanner
+// initiatite										= new
+// pass a number in to read data from terminal						      Scanner 
+// read the input number									     (System.in);
+// print message to prompt user, add label 			 	System.out.print("Number: ");
+// ingest that input								     scanner.nextInt();		// dot operator builtin method
+// store the inputNumber in the variable called number			int number = 				
+
+// code so far
+									Scanner scanner = new Scanner(System.in);
+									System.out.print("Number: ");
+									int number = scanner.nextInt();
+
+// check to see if the number is divisible by 5 or not
+// if number modulus 5 = 0 then print Fizz
+// otherwise if number modulsus 3 print Buzz
+// if the number is divisible by 5 and 3 print FizzBuzz
+// otherwise print same inputNumber
+
+
+
+
+
+
+// 03.08 Exercise Fizz Buzz
+// enter number
+// if divisible by 5 give Fizz
+// if divisible by 3 give Buzz
+// if divisible by 5 or 3 give FizzBuzz
+// if divisible by neither 5 or 3 we get the input number repeated on the terminal
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input a number (1-99): ");
+        int inputNumber = scanner.nextInt();
+
+        if (inputNumber % 5 == 0)
+            System.out.println("Fizz");
+        else if (inputNumber % 3 == 0)
+            System.out.println("Buzz");
+        else if (inputNumber % 5 == 0 && inputNumber % 3 == 0)
+            System.out.println("FizzBuzz");
+        else
+            System.out.println(inputNumber);
+
+        
+        }
+    }
+}
+
+
+
+// but above yields 5 Fizz for input number 15
+// so move input % 5 && input % 3 to top
+// like this
+
+
+// logic lesson: most specific conditions on top, least specific on bottom
+
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input a number (1-99): ");
+        int inputNumber = scanner.nextInt();
+
+        if (inputNumber % 5 == 0 && inputNumber % 3 == 0)
+            System.out.println("FizzBuzz");
+        else if (inputNumber % 5 == 0)
+            System.out.println("Fizz");
+        else if (inputNumber % 3 == 0)
+            System.out.println("Buzz");
+        else
+            System.out.println(inputNumber);
+    }
+}
+
+
+
+
+// but then repeating inputNumber % 5 == 0 twice
+
+// DRY
+
+// This is FLAT Structure thus easier to read.
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input a number (1-99): ");
+        int inputNumber = scanner.nextInt();
+
+        if (inputNumber % 5 == 0) {
+            if (inputNumber % 3 == 0)
+                System.out.println("FizzBuzz");
+            else
+                System.out.println("Fizz");
+            }
+        else if (inputNumber % 3 == 0)
+            System.out.println("Buzz");
+        else
+            System.out.println(inputNumber);
+    }
+}
+
+
+
+
+
+
+// so change logic from
+// % 5 % 3 on same line
+// to seperate lines
+// but then we have more NESTED IF ELSE STATEMENTS which can be confusing to other people
+
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input a number (1-99): ");
+        int inputNumber = scanner.nextInt();
+
+        if (inputNumber % 5 == 0) {
+            if (inputNumber % 3 == 0)
+                System.out.println("FizzBuzz");
+            else
+                System.out.println("Fizz");
+            }
+        else if (inputNumber % 3 == 0)
+            System.out.println("Buzz");
+        else
+            System.out.println(inputNumber);
+    }
+}
+
+
+
+
+// so stay with 2nd best solution = FLAT STRUCTURE. Stay away from Nested Structure.
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input a number (1-99): ");
+        int inputNumber = scanner.nextInt();
+
+        if (inputNumber % 5 == 0) {
+            if (inputNumber % 3 == 0)
+                System.out.println("FizzBuzz");
+            else
+                System.out.println("Fizz");
+            }
+        else if (inputNumber % 3 == 0)
+            System.out.println("Buzz");
+        else
+            System.out.println(inputNumber);
+    }
+}
